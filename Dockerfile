@@ -10,12 +10,10 @@ RUN apt-get update \
 
 ADD squid.conf /etc/squid3/squid.conf
 
-ADD start /start
-
-RUN chmod 755 /start
+ADD start.sh /start.sh
 
 EXPOSE 3128
 
 VOLUME "/var/spool/squid3"
 
-CMD "/start"
+CMD "/start.sh
